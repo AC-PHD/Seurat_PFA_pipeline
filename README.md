@@ -1,10 +1,10 @@
 # Seurat_PFA_pipeline
 # This ReadMe contains a short version of the ReadMe for the data preparation
 # If you decide to use other data sets, you will need to change the scripts accordingly
-# => everything you need to know is described in detail in the data_prepartion_ReadMe
+# everything you need to know is described in detail in the data_prepartion_ReadMe
 
-## The first four steps are R scripts
-## step 05 and beyond are python scripts
+# The first four steps are R scripts
+# step 05 and beyond are python scripts
 
 
 1.) 01_Input 
@@ -14,9 +14,6 @@
 
 --> 01_Input/b_H5AD_file for H5AD files => Step1_H5AD 
 ====> use result in 02_Preparation/Subset_1 and 02_Preparation/Subset_2
-
-##########
-##########
 
 2.) 02_Preparation
 -> prepare data (filter for quality, DoubletFinder to remove doublets)
@@ -29,8 +26,6 @@ First:
 
 --> 02_Preparation/Subset_2 => Step2a_SortingBySubset
 ====> perform next step in 02_Preparation/Subset_2/Output (will be generated automatically by running Step2a_SortingBySubset)
-
-##########
 
 Second:
 # perform for all subsets (here for Fibroblast and Macrophage)
@@ -47,7 +42,6 @@ Second:
                                           result of Step2b = required input for next step will be saved there)
 
 
-##########
 
 --> 02_Preparation/Subset_2/Output/<firstSubset e.g. Fibroblast_ascending aorta>
 ====> perform Step2b_RemovingDoublets 
@@ -58,8 +52,6 @@ Second:
 ====> perform Step2b_RemovingDoublets 
 ========> perform next step in 02_Preparation/Subset_2/Output/Step_03 (will be generated automatically by running Step2b_RemovingDoublets,
                                                                        result of Step2b = required input for next step will be saved there)
-##########
-##########
 
 3.) Joining groups
 # perform for all subsets (here for Fibroblast and Macrophage)
@@ -73,8 +65,6 @@ Second:
 ===> perform Step3_joiningSubGroups
 ========> perform next step in 04_CreateInputTable (will be generated automatically by running Step3_joiningSubGroups,
                                                     result of Step3_joiningSubGroups = required input for next step will be saved there)
-##########
-##########
 
 4.) Create input table for Randomizer script
 # joins the two tables (one for each SubSet, e.g. one for all Macrophage data and the second for all Fibroblast data)
