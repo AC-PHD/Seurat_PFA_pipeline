@@ -19,18 +19,21 @@ rownames(SubGroup_1_merger) <- SubGroup_1_merger$V1
 # View(SubGroup_1_merger)
 names(SubGroup_1_merger)[1] <- c("SubGroup_1_info")
 # View(SubGroup_1_merger)
+TableName <- paste0("Output/",SubGroup_1_name,".csv")
+write.table(SubGroup_1_merger, file = TableName , sep=",",  col.names=FALSE)
 
 SubGroup_2_merger <- SubGroup_2
 rownames(SubGroup_2_merger) <- SubGroup_2_merger$V1
 # View(SubGroup_2_merger)
 names(SubGroup_2_merger)[1] <- c("SubGroup_2_info")
 # View(SubGroup_2_merger)
+TableName <- paste0("Output/",SubGroup_2_name,".csv")
+write.table(SubGroup_2_merger, file = TableName , sep=",",  col.names=FALSE)
 
 Merged_table <- dplyr::left_join(SubGroup_1_merger, SubGroup_2_merger, 
                                  by = c('SubGroup_1_info' = 'SubGroup_2_info'))
 
 View(Merged_table)
-
 head(Merged_table$SubGroup_2_info)
 head(Merged_table$SubGroup_1_info)
 
