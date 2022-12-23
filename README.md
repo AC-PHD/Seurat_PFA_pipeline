@@ -7,7 +7,7 @@ The first four steps are R scripts
 step 05 and beyond are python scripts
 
 
-1.) 01_Input 
+# 1.) 01_Input 
 -> import data in R 
 --> 01_Input/a_RDS_file for RDS files => Step1_RDS 
 ====> use result in 02_Preparation/Subset_1 and 02_Preparation/Subset_2
@@ -15,7 +15,7 @@ step 05 and beyond are python scripts
 --> 01_Input/b_H5AD_file for H5AD files => Step1_H5AD 
 ====> use result in 02_Preparation/Subset_1 and 02_Preparation/Subset_2
 
-2.) 02_Preparation
+# 2.) 02_Preparation
 -> prepare data (filter for quality, DoubletFinder to remove doublets)
 
 First:
@@ -53,7 +53,7 @@ will remove doublets
 ========> perform next step in 02_Preparation/Subset_2/Output/Step_03 (will be generated automatically by running Step2b_RemovingDoublets,
                                                                        result of Step2b = required input for next step will be saved there)
 
-3.) Joining groups
+# 3.) Joining groups
 perform for all subsets (here for Fibroblast and Macrophage)
 
 --> 02_Preparation/Subset_1/Output/03_Step
@@ -66,7 +66,7 @@ perform for all subsets (here for Fibroblast and Macrophage)
 ========> perform next step in 04_CreateInputTable (will be generated automatically by running Step3_joiningSubGroups,
                                                     result of Step3_joiningSubGroups = required input for next step will be saved there)
 
-4.) Create input table for Randomizer script
+# 4.) Create input table for Randomizer script
 joins the two tables (one for each SubSet, e.g. one for all Macrophage data and the second for all Fibroblast data)
 the required input files will appear here
 
@@ -75,7 +75,7 @@ the required input files will appear here
 =====>  will create a new directory "Output" where the resulting table will be saved
 ========> perform next step in 05_Randomizer 
 
-5.) Randomizer  
+# 5.) Randomizer  
 !!! This step will take some time !!!
 
 -> create a directory called Randomizer on your harddrive
