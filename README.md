@@ -1,10 +1,10 @@
-# Seurat_PFA_pipeline
-# This ReadMe contains a short version of the ReadMe for the data preparation
-# If you decide to use other data sets, you will need to change the scripts accordingly
-# everything you need to know is described in detail in the data_prepartion_ReadMe
+Seurat_PFA_pipeline
+This ReadMe contains a short version of the ReadMe for the data preparation
+If you decide to use other data sets, you will need to change the scripts accordingly
+everything you need to know is described in detail in the data_prepartion_ReadMe
 
-# The first four steps are R scripts
-# step 05 and beyond are python scripts
+The first four steps are R scripts
+step 05 and beyond are python scripts
 
 
 1.) 01_Input 
@@ -19,7 +19,7 @@
 -> prepare data (filter for quality, DoubletFinder to remove doublets)
 
 First:
-# perform for all subsets (here for Fibroblast and Macrophage)
+perform for all subsets (here for Fibroblast and Macrophage)
 
 --> 02_Preparation/Subset_1 => Step2a_SortingBySubset 
 ====> perform next step in 02_Preparation/Subset_1/Output (will be generated automatically by running Step2a_SortingBySubset)
@@ -28,9 +28,9 @@ First:
 ====> perform next step in 02_Preparation/Subset_2/Output (will be generated automatically by running Step2a_SortingBySubset)
 
 Second:
-# perform for all subsets (here for Fibroblast and Macrophage)
-# if the subset contains more than one group (e.g., Macrophage contains different organ ontologies (ascending and descending aorta)) 
-# will remove doublets 
+perform for all subsets (here for Fibroblast and Macrophage)
+if the subset contains more than one group (e.g., Macrophage contains different organ ontologies (ascending and descending aorta)) 
+will remove doublets 
 
 --> 02_Preparation/Subset_1/Output/<firstSubset e.g. Macrophage_ascending aorta>
 ====> perform Step2b_RemovingDoublets 
@@ -54,7 +54,7 @@ Second:
                                                                        result of Step2b = required input for next step will be saved there)
 
 3.) Joining groups
-# perform for all subsets (here for Fibroblast and Macrophage)
+perform for all subsets (here for Fibroblast and Macrophage)
 
 --> 02_Preparation/Subset_1/Output/03_Step
 ===> perform Step3_joiningSubGroups
@@ -67,8 +67,8 @@ Second:
                                                     result of Step3_joiningSubGroups = required input for next step will be saved there)
 
 4.) Create input table for Randomizer script
-# joins the two tables (one for each SubSet, e.g. one for all Macrophage data and the second for all Fibroblast data)
-# the required input files will appear here
+joins the two tables (one for each SubSet, e.g. one for all Macrophage data and the second for all Fibroblast data)
+the required input files will appear here
 
 --> 04_CreateInputTable
 ===> perform Step4_Combining_Groups_for_InputTable
@@ -85,6 +85,3 @@ Second:
 -> run the python script
 
 =====> your data is now ready for PFA
-
-
-
