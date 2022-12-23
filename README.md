@@ -1,7 +1,7 @@
 ## Seurat_PFA_pipeline
-###### This ReadMe contains a short version of the ReadMe for the data preparation
-######  If you decide to use other data sets, you will need to change the scripts accordingly
-######  everything you need to know is described in detail in the data_prepartion_ReadMe
+#### This ReadMe contains a short version of the ReadMe for the data preparation
+####  If you decide to use other data sets, you will need to change the scripts accordingly
+####  everything you need to know is described in detail in the data_prepartion_ReadMe
 
 The first four steps are R scripts
 step 05 and beyond are python scripts
