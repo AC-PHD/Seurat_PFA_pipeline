@@ -104,11 +104,13 @@ def get_zeroes(row):
 
 # Randomizer Step
 
+cell_count = 1000 # how many cells of each type shall be selected as input for PFA
+
 if __name__ == '__main__':
     if not os.path.exists('randomizer_results'):
         os.makedirs('randomizer_results')
     result_cnt = 1
-    results = get_random_columns(initial_path, 1000)
+    results = get_random_columns(initial_path, cell_count)
     with open('randomizer_results/result_{}.csv'.format(result_cnt), 'w') as file:
         writer = csv.writer(file)
         for row in results['result']:
@@ -121,7 +123,7 @@ if __name__ == '__main__':
     finished = False
     while finished == False:
         print("Result", result_cnt, "is starting to randomize")
-        results = get_random_columns('randomizer_results/rest_{}.csv'.format(result_cnt-1), 1000)
+        results = get_random_columns('randomizer_results/rest_{}.csv'.format(result_cnt-1), cell_count)
         if results['success'] == False:
             finished = True
             break
