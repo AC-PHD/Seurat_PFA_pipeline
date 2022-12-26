@@ -82,6 +82,51 @@ the required input files will appear here
 -> copy the table generated above (e.g., Macrophage_asc_as_0_Macrophage_desc_as_0_Fibroblast_asc_as_1_Fibroblast_desc_as_1.csv)
 	into the directory
 -> copy the python script in the directory
+-> change the initial path to the name of your input data (e.g., initial_path = 'Fib_I_asc_as_0_Fib_I_desc_as_0_VSMC_I_asc_as_1_VSMC_I_desc_as_1.csv')
 -> run the python script
 
 =====> your data is now ready for PFA
+
+## 6.) PFA (original version)
+predicts genes for cell type identification 
+divided in three steps: 1.) preparing the data set, 2.) PFA gene selection, 3.) validating the PFA results 
+
+-> Randomizer will generate n results files (depends on the size of your original data set)
+--> generate a directory for each PFA run (e.g., 3 directories if you intend to use "result_1.csv", "result_2.csv", and "result_3.csv")
+
+copy all 3 pyhton scripts in these directories
+-> Copy the python files of 06_PFA/01_Prepare_Data_Set into your PFA directory (for the first step)
+-> Copy the python files of 06_PFA/02_PFA_gene_selection into your PFA directory (for the second step)
+-> Copy the python files of 06_PFA/03_Validate_PFA_Results into your PFA directory (for the third step)
+
+### 1.) 01_Prepare_Data_Set
+prepares the data set for PFA
+
+requires a "result_n.csv" file (eg., result_1.csv)
+and the python script available in 06_PFA/01_Prepare_Data_Set
+
+-> the default path is result_1.csv => if required, change the path according to the result file (e.g., result_2.csv)
+-> run the python script
+
+==> will generate: "gene_names.csv" and "PFA_analysis_data.csv" which are required for the next steps
+
+### 2.) 02_PFA_gene_selection
+selects the PFA genes
+!!! This step will take some time !!!
+
+requires "gene_names.csv" and "PFA_analysis_data.csv" (generated in the first step)
+and the python script available in 06_PFA/02_PFA_gene_selection
+
+-> run the python script
+
+==> will generate: "gene_mutual_information.csv" (containing the genes selected by PFA)
+
+### 3.) 03_Validate_PFA_Results
+validates the PFA results
+
+requires "gene_names.csv", "PFA_analysis_data.csv" (generated in the first step), 
+and "gene_mutual_information.csv" (containing the genes selected by PFA, generated in the second step)
+and the python script available in 03_Validate_PFA_Results
+
+-> run the python script
+
