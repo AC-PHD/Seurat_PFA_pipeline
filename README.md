@@ -102,18 +102,19 @@ copy all 3 pyhton scripts in these directories
 -> Copy the python files of 06_PFA/02_PFA_gene_selection into your PFA directory (for the second step)
 -> Copy the python files of 06_PFA/03_Validate_PFA_Results into your PFA directory (for the third step)
 
-### 1.) Prepare Data Set
+### 1.) 01_Prepare_Data_Set
 prepares the data set for PFA
 
 requires a "result_n.csv" file (eg., result_1.csv)
 and the python script available in 06_PFA/01_Prepare_Data_Set
 
 -> the default path is result_1.csv => if required, change the path according to the result file (e.g., result_2.csv)
+
 -> run the python script
 
 ==> will generate: "gene_names.csv" and "PFA_analysis_data.csv" which are required for the next steps
 
-### 2.) PFA gene selection 
+### 2.) 02_PFA_gene_selection 
 selects the PFA genes
 !!! This step will take some time !!!
 
@@ -124,7 +125,7 @@ and the python script available in 06_PFA/02_PFA_gene_selection
 
 ==> will generate: "gene_mutual_information.csv" (containing the genes selected by PFA)
 
-### 3.) Validating the PFA results
+### 3.) 03_Validate_PFA_Results
 validates the PFA results
 
 requires "gene_names.csv", "PFA_analysis_data.csv" (generated in the first step), 
