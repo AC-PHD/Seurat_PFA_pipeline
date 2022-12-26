@@ -89,7 +89,10 @@ the required input files will appear here
 
 ## 6.) PFA (original version)
 predicts genes for cell type identification 
-divided in three steps: 1.) preparing the data set, 2.) PFA gene selection, 3.) validating the PFA results 
+divided in three steps: 
+	1.) preparing the data set (01_Prepare_Data_Set), 
+	2.) PFA gene selection (02_PFA_gene_selection),
+	3.) validating the PFA results (03_Validate_PFA_Results)
 
 -> Randomizer will generate n results files (depends on the size of your original data set)
 --> generate a directory for each PFA run (e.g., 3 directories if you intend to use "result_1.csv", "result_2.csv", and "result_3.csv")
@@ -99,7 +102,7 @@ copy all 3 pyhton scripts in these directories
 -> Copy the python files of 06_PFA/02_PFA_gene_selection into your PFA directory (for the second step)
 -> Copy the python files of 06_PFA/03_Validate_PFA_Results into your PFA directory (for the third step)
 
-### 1.) 01_Prepare_Data_Set
+### 1.) Prepare Data Set
 prepares the data set for PFA
 
 requires a "result_n.csv" file (eg., result_1.csv)
@@ -110,7 +113,7 @@ and the python script available in 06_PFA/01_Prepare_Data_Set
 
 ==> will generate: "gene_names.csv" and "PFA_analysis_data.csv" which are required for the next steps
 
-### 2.) 02_PFA_gene_selection
+### 2.) PFA gene selection 
 selects the PFA genes
 !!! This step will take some time !!!
 
@@ -121,7 +124,7 @@ and the python script available in 06_PFA/02_PFA_gene_selection
 
 ==> will generate: "gene_mutual_information.csv" (containing the genes selected by PFA)
 
-### 3.) 03_Validate_PFA_Results
+### 3.) Validating the PFA results
 validates the PFA results
 
 requires "gene_names.csv", "PFA_analysis_data.csv" (generated in the first step), 
