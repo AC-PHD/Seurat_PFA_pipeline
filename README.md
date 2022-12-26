@@ -134,3 +134,4 @@ and the python script available in 03_Validate_PFA_Results
 
 -> run the python script
 
+Note: If you prefer running the validation using another gene set instead of "gene_mutual_information.csv", you can do so by changing the respecitve parameter.
