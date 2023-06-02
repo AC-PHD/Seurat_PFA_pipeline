@@ -1,6 +1,8 @@
 ## Seurat_PFA_pipeline
 #### This ReadMe contains a short version of the ReadMe for the data preparation
-####  If you decide to use other data sets, you will need to change the scripts accordingly
+####  and serves as an example on how to analyze the data.
+####  If you decide to use other data sets or other tools or prefer to use a python-based dataset preparation, 
+####  you will need to change the scripts accordingly
 ####  everything you need to know is described in detail in the data_prepartion_ReadMe
 
 The first four steps are R scripts
@@ -135,3 +137,13 @@ and the python script available in 03_Validate_PFA_Results
 -> run the python script
 
 Note: If you prefer running the validation using another gene set instead of "gene_mutual_information.csv", you can do so by changing the respecitve parameter.
+	
+## 7.) 07_merge_mutual_information
+to get the mutual information with the names of the genes 
+
+-> create a new directory and copy paste the files into the directory:
+	* "result_1.csv"
+	* "gene_mutual_information.csv"
+
+--> run the script 
+
