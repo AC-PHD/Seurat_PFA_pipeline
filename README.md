@@ -1,12 +1,13 @@
 ## Seurat_PFA_pipeline
 
-Methodic details about the pipeline can be found in https://doi.org/10.21203/rs.3.rs-2435765/v1 
+Methodic details about the pipeline can be found in https://doi.org/10.1016/j.csbj.2023.06.002 
 
 If you use our pipeline or if you are inspired for further development by our work, we will be happy if you cite our paper (currently a preprint):
 
-Tim Breitenbach, Aylin Caliskan, Deniz Caliskan et al. 
-Focused single-cell analysis with principal feature analysis, mutual information, and machine learning reveals cell type signatures, 
-04 January 2023, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-2435765/v1]
+Aylin Caliskan, Deniz Caliskan, Lauritz Rasbach, Weimeng Yu, Thomas Dandekar, Tim Breitenbach,
+Optimized Cell Type Signatures Revealed From Single-cell data by Combining Principal Feature Analysis, Mutual Information, and Machine Learning,
+Computational and Structural Biotechnology Journal, 2023, ISSN 2001-0370,
+https://doi.org/10.1016/j.csbj.2023.06.002.
 
 #### This ReadMe contains a short version of the ReadMe for the data preparation
 ####  and serves as an example on how to analyze the data.
