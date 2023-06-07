@@ -2,7 +2,7 @@
 
 Methodic details about the pipeline can be found in https://doi.org/10.1016/j.csbj.2023.06.002 
 
-If you use our pipeline or if you are inspired for further development by our work, we will be happy if you cite our paper (currently a preprint):
+If you use our pipeline or if you are inspired for further development by our work, we will be happy if you cite our paper:
 
 Aylin Caliskan, Deniz Caliskan, Lauritz Rasbach, Weimeng Yu, Thomas Dandekar, Tim Breitenbach,
 Optimized Cell Type Signatures Revealed From Single-cell data by Combining Principal Feature Analysis, Mutual Information, and Machine Learning,
